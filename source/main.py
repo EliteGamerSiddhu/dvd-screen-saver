@@ -11,9 +11,9 @@ def create_path_list(folder_dir):
     return path_list
 
 path_list = create_path_list("./assets/logos/")
-width, height = 1000, 600
+width, height = 1000, 600                        #Adjust size of screen
 size = (width, height)
-speed = [7,7]
+speed = [7,7]                                    #Adjust x and y axis speed here
 black = (0, 0, 0)
 
 clock = pygame.time.Clock()
@@ -27,7 +27,7 @@ while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT : sys.exit()
         
-    clock.tick(60)
+    clock.tick(60)                                #Keeps window at 60 fps
     allsprites.update()
     screen.fill(black)
     allsprites.draw(screen)
