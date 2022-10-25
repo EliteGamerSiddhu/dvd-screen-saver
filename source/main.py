@@ -13,15 +13,13 @@ def create_path_list(folder_dir):
 path_list = create_path_list("./assets/logos/")
 width, height = 1000, 600                        #Adjust size of screen
 size = (width, height)
-speed = [7,7]                                    #Adjust x and y axis speed here
+speed = [2,2]                                    #Adjust x and y axis speed here
 black = (0, 0, 0)
 
 clock = pygame.time.Clock()
 screen = pygame.display.set_mode(size)
 logo = Ball(path_list, 80, 50, speed, width, height)
 allsprites = pygame.sprite.RenderPlain((logo))
-background = pygame.image.load("./assets/background.jpg")
-background = pygame.transform.scale(background, size)
 
 while True:
     for event in pygame.event.get():
